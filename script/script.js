@@ -49,34 +49,12 @@ function mostrarFilmes(lista){
     });
 }
 
+mostrarFilmes(filmes)
+
 function verDetalhes(titulo) {
-
-    const serie = series.find(
-        s => s.titulo === titulo
-    );
-
-    Swal.fire({
-        title: serie.titulo,
-
-        html: `
-            <img src="${serie.imagem}"
-                 style="width:200px;
-                 border-radius:10px;
-                 margin-bottom:15px;">
-
-            <p><strong>Categoria:</strong>
-            ${serie.categoria}</p>
-
-            <p><strong>Classificação:</strong>
-            ${serie.classificacao} anos</p>
-
-            <p><strong>Temporadas:</strong>
-            ${serie.temporadas}</p>
-
-            <p>${serie.descricao}</p>
-        `,
-
-        width: 700,
-        confirmButtonText: "Fechar"
-    });
+        Swal.fire({
+            title: titulo,
+            text:"Mais informações do filme",
+            icon: "info"
+        })
 }
